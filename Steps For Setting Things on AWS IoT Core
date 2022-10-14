@@ -1,0 +1,19 @@
+1) Create a Thing
+2) Download all the certificates and upload them on the device's location
+3) Select the Thing after creation
+4) Go to Certificates tab
+5) Click the Certificate ID
+6) Click on the Policies of the certificate
+7) Click on the latest version of the policy
+8) Scroll down to the bottom and click on Edit version button
+9) Remove all the policy statements
+10) Add new policy statement
+11) Under Policy Effect, select Allow
+12) Under Policy Action, enter iot:* 
+13) Under Policy Resource, enter *
+14) Click on Save as new version
+15) On the policy screen, select the latest version
+16) Click on Set as active button
+
+
+The above steps should allow the device data flow into the AWS IoT Core
