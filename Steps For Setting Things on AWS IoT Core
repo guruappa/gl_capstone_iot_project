@@ -17,3 +17,7 @@
 
 
 The above steps should allow the device data flow into the AWS IoT Core
+
+
+command for creating thing using cli -->
+aws iot create-thing --thing-name "sensor_6" --thing-type-name "SoilSensor" 
