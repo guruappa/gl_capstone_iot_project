@@ -1,0 +1,48 @@
+Create Things via CLI
+
+aws iot create-thing --thing-name "sensor_11” --thing-type-name "SoilSensor" | tee create-thing.json
+aws iot create-thing --thing-name "sensor_12” --thing-type-name "SoilSensor" | tee create-thing.json
+aws iot create-thing --thing-name "sensor_13” --thing-type-name "SoilSensor" | tee create-thing.json
+aws iot create-thing --thing-name "sensor_14” --thing-type-name "SoilSensor" | tee create-thing.json
+aws iot create-thing --thing-name "sensor_21” --thing-type-name "SoilSensor" | tee create-thing.json
+aws iot create-thing --thing-name "sensor_22” --thing-type-name "SoilSensor" | tee create-thing.json
+aws iot create-thing --thing-name "sensor_23” --thing-type-name "SoilSensor" | tee create-thing.json
+aws iot create-thing --thing-name "sensor_24” --thing-type-name "SoilSensor" | tee create-thing.json
+aws iot create-thing --thing-name "sensor_31” --thing-type-name "SoilSensor" | tee create-thing.json
+aws iot create-thing --thing-name "sensor_32” --thing-type-name "SoilSensor" | tee create-thing.json
+aws iot create-thing --thing-name "sensor_33” --thing-type-name "SoilSensor" | tee create-thing.json
+aws iot create-thing --thing-name "sensor_34” --thing-type-name "SoilSensor" | tee create-thing.json
+aws iot create-thing --thing-name "sensor_41” --thing-type-name "SoilSensor" | tee create-thing.json
+aws iot create-thing --thing-name "sensor_42” --thing-type-name "SoilSensor" | tee create-thing.json
+aws iot create-thing --thing-name "sensor_43” --thing-type-name "SoilSensor" | tee create-thing.json
+aws iot create-thing --thing-name "sensor_44” --thing-type-name "SoilSensor" | tee create-thing.json
+aws iot create-thing --thing-name "sensor_51” --thing-type-name "SoilSensor" | tee create-thing.json
+aws iot create-thing --thing-name "sensor_52” --thing-type-name "SoilSensor" | tee create-thing.json
+aws iot create-thing --thing-name "sensor_53” --thing-type-name "SoilSensor" | tee create-thing.json
+aws iot create-thing --thing-name "sensor_54” --thing-type-name "SoilSensor" | tee create-thing.json
+
+aws iot create-thing --thing-name "sprinkler_1" --thing-type-name "Sprinkler" | tee create-thing.json
+aws iot create-thing --thing-name "sprinkler_2” --thing-type-name "Sprinkler" | tee create-thing.json
+aws iot create-thing --thing-name "sprinkler_3” --thing-type-name "Sprinkler" | tee create-thing.json
+aws iot create-thing --thing-name "sprinkler_4” --thing-type-name "Sprinkler" | tee create-thing.json
+aws iot create-thing --thing-name "sprinkler_5” --thing-type-name "Sprinkler" | tee create-thing.json
+
+Examples to Delete Things via CLI:
+
+aws iot delete-thing --thing-name "sprinkler_1"
+aws iot delete-thing --thing-name "sprinkler_2”
+aws iot delete-thing --thing-name "sprinkler_3”
+aws iot delete-thing --thing-name "sprinkler_4”
+aws iot delete-thing --thing-name "sprinkler_5”
+
+Create policy:
+
+aws iot create-policy --policy-name sensor_11_all_access --policy-document '{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["iot:*"], "Resource": ["*"]}]}'
+aws iot create-policy --policy-name sprinkler_1_all_access --policy-document '{"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Action": ["iot:*"], "Resource": ["*"]}]}'
+
+
+CLI command to download data certificates:
+
+aws iot create-keys-and-certificate --certificate-pem-outfile sprinkler_1-certificate.pem.crt --public-key-outfile sprinkler_1-public.pem.key --private-key-outfile sprinkler_1-private.pem.key --set-as-active | tee create-keys-and-certificate.json
+
+aws iot create-keys-and-certificate --certificate-pem-outfile sensor_11-certificate.pem.crt --public-key-outfile sensor_11-public.pem.key --private-key-outfile sensor_11-private.pem.key --set-as-active | tee create-keys-and-certificate.json
